@@ -17,6 +17,10 @@ body {
     box-shadow: 0 0 20px #fff, 0 0 30px #A855F7, 0 0 40px #7C3AED, 0 0 80px #7C3AED;
   }
 
+  .glow-cardbox {
+    box-shadow: 0 0 5px #fff, 0 0 8px #A855F7;
+  }
+
   .glow-pulse {
     animation: glowPulse 2s ease-in-out infinite;
   }
