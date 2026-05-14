@@ -11,14 +11,13 @@ export enum Theme {
   styleUrl: './tag.scss',
 })
 export class Tag {
-  tagIcon = input.required<string>();
   label = input.required<string>();
   theme = input.required<Theme>();
 
 
   protected readonly themeClass = computed(() => {
     if(this.theme() === Theme.PURPLE) {
-      return 'text-text text-sm';
+      return 'text-text text-sm font-bold';
     }
     return '';
   });
