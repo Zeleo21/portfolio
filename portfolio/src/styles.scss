@@ -17,6 +17,11 @@ body {
     text-shadow: 0 0 20px #fff, 0 0 30px #A855F7, 0 0 40px #7C3AED, 0 0 80px #7C3AED;
   }
 
+  .dot-grid {
+    background-image: radial-gradient(circle, #2D2D4E 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
   .underline-slide {
     position: relative;
 
