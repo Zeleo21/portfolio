@@ -1,0 +1,9 @@
+:host ::ng-deep {
+  .reveal-description, .reveal-software {
+    span {
+      display: inline-block;
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+  }
+}
