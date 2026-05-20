@@ -1,24 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles */
 
 body {
-  background-color:#0F0F14
+  /* On utilise la couleur background définie dans ton thème Tailwind */
+  background-color: #0A0A0A;
 }
 
 @layer utilities {
   .glow-title {
-    text-shadow: 0 0 8px #fff, 0 0 20px #A855F7, 0 0 40px #7C3AED, 0 0 80px #7C3AED;
+    text-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px rgba(255, 255, 255, 0.5);
   }
 
   .glow-subtitle {
-    text-shadow: 0 0 6px #A855F7, 0 0 25px #7C3AED;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 15px rgba(112, 112, 112, 0.4);
   }
 
   .glow-box {
-    box-shadow: 0 0 20px #fff, 0 0 30px #A855F7, 0 0 40px #7C3AED, 0 0 80px #7C3AED;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1), 0 0 15px rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   .glow-cardbox {
-    box-shadow: 0 0 5px #fff, 0 0 8px #A855F7;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 0 12px rgba(139, 92, 246, 0.3);
   }
 
   .glow-pulse {
@@ -26,12 +28,12 @@ body {
   }
 
   @keyframes glowPulse {
-    0%, 100% { filter: drop-shadow(0 0 3px #8B5CF6); }
-    50%       { filter: drop-shadow(0 0 8px #A855F7) drop-shadow(0 0 16px #7C3AED); }
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3)); }
+    50%       { filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6)); }
   }
 
   .dot-grid {
-    background-image: radial-gradient(circle, #2D2D4E 1px, transparent 1px);
+    background-image: radial-gradient(circle, #707070 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
@@ -45,9 +47,9 @@ body {
       left: 0;
       width: 0;
       height: 2px;
-      background: #E9D5FF;
+      background: #FFFFFF;
       transition: width 0.3s ease;
-      box-shadow: 0 0 6px #A855F7, 0 0 15px #7C3AED;
+      box-shadow: 0 0 8px #FFFFFF;
     }
 
     &:hover::after {

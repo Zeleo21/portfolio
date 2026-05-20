@@ -1,7 +1,8 @@
 import {afterNextRender, Component, inject} from '@angular/core';
 import {Tag, Theme} from '../components/tag/tag';
-import {stagger, splitText, createTimeline, AnimationParams} from 'animejs';
+import { splitText, createTimeline } from 'animejs';
 import {AnimateService} from '../service/animate/animate.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -16,6 +17,7 @@ export class Profile {
   private readonly animateService: AnimateService = inject(AnimateService);
   private readonly engineerFullStackCharsStaggerDelay: number = 80;
   private readonly descriptionWordsStaggerDelay: number = 100;
+  private router = inject(Router);
 
   constructor() {
     afterNextRender(() => {
@@ -34,5 +36,9 @@ export class Profile {
       tl.add(engineerFullstackChars, this.animateService.getAppearingTextConfigWithSpecificStagger(this.engineerFullStackCharsStaggerDelay));
       tl.add(descriptionWords, this.animateService.getAppearingTextConfigWithSpecificStagger(this.descriptionWordsStaggerDelay));
     });
+  }
+
+  navigateToProjects() {
+    this.router.navigate(['/projects']);
   }
 }
