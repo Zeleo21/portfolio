@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular/src/icons';
-import {SquareTerminal} from 'lucide-angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,5 +11,9 @@ import {SquareTerminal} from 'lucide-angular';
   styleUrl: './header.scss',
 })
 export class Header {
+  private router = inject(Router);
 
+  protected navigateToHome() {
+    this.router.navigate(['/'])
+  }
 }

@@ -8,6 +8,7 @@ body {
 @layer utilities {
   .glow-title {
     text-shadow: 0 0 8px #fff, 0 0 20px #fff, 0 0 40px rgba(255, 255, 255, 0.5);
+    transition : all 0.3s;
   }
 
   .glow-subtitle {
