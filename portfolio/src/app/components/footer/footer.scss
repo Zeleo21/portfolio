@@ -1,0 +1,17 @@
+.scroll-indicator {
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.scroll-line {
+  animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(300%); }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1; }
+}

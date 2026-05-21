@@ -3,10 +3,11 @@ import { Tag, Theme } from '../components/tag/tag';
 import { splitText, stagger, Timeline } from 'animejs';
 import { AnimateService } from '../service/animate/animate.service';
 import { Router } from '@angular/router';
+import {Footer} from '../components/footer/footer';
 
 @Component({
   selector: 'app-profile',
-  imports: [Tag],
+  imports: [Tag, Footer],
   templateUrl: './profile.html',
   styleUrl: './profile.scss',
 })
