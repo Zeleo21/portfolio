@@ -1,32 +1,71 @@
-<section class="dot-grid w-screen pt-32 pb-32">
-  <div class="flex justify-between items-center m-12">
-    <div class="flex-col gap-4">
-      <div class="flex justify-start items-center pb-4">
-        <app-tag [theme]="Theme.PURPLE" [label]="'system_status: stable'"></app-tag>
-      </div>
-      <h1 class="text-6xl font-bold text-white">Léo Guazzaroni -</h1>
-      <h1 class="text-6xl font-bold text-text glow-subtitle reveal-software">Software Engineer Fullstack</h1>
-      <p class="text-text pt-8 reveal-description"> EPITA 2025. Angular/Node.js expert with a growing like to system design and software architecture</p>
-      <div class="flex justify-start items-center mt-4">
-        <button class="bg-primary text-background px-8 py-4 font-mono text-sm font-bold m-2 hover:bg-background border border-surface hover:text-primary hover:border hover:border-zinc-800" (click)="navigateToProjects()">Projects</button>
-        <button class="text-white border border-white px-8 py-4 font-mono text-sm font-bold m-2">Contact</button>
-      </div>
+<section class="dot-grid w-full h-[calc(100vh-76px)] flex items-start justify-between pt-36 px-12 overflow-hidden">
+  <div class="flex flex-col gap-4">
+    <div class="flex justify-start items-center pb-4">
+      <app-tag [theme]="Theme.PURPLE" [label]="'system_status: stable'"></app-tag>
     </div>
-    <div class="w-3/12 min-h-84 rounded-xl border border-zinc-800 bg-background p-6 ml-8">
-      <div class="flex justify-between mt-4">
-        <p class="text-text">first</p>
-        <p class="text-text font-bold">v2.0.24</p>
+    <h1 class="text-6xl font-bold text-white">Léo Guazzaroni -</h1>
+    <h1 class="text-6xl font-bold text-text glow-subtitle reveal-software">Software Engineer Fullstack</h1>
+    <p class="text-text pt-8 reveal-description">EPITA 2025. Angular/Node.js expert with a growing liking to system design and software architecture</p>
+    <div class="flex justify-start items-center mt-4">
+      <button class="bg-primary text-background px-8 py-4 font-mono text-sm font-bold m-2 hover:bg-background border border-surface hover:text-primary hover:border hover:border-zinc-800" (click)="navigateToProjects()">Projects</button>
+      <button class="text-white border border-white px-8 py-4 font-mono text-sm font-bold m-2">Contact</button>
+    </div>
+  </div>
+  <div class="w-3/12 min-h-84 rounded-xl border border-zinc-800  p-6 shrink-0 reveal-grid opacity-0">
+    <div class="flex justify-between mt-4">
+      <p class="text-primary glow-title">> loading most used stack...</p>
+    </div>
+    <div class="flex flex-col gap-3 mt-4">
+      <div class="flex-col reveal-frontend opacity-0">
+        <p class="pl-1 text-xs font-mono text-primary mb-1">Frontend</p>
+        <div class="flex overflow-hidden gap-2">
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-500 font-mono text-primary w-fit">
+            > Angular
+          </div>
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > Typescript
+          </div>
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > React
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col gap-3 mt-16">
-        <div class="h-2 bg-border w-11/12 rounded"></div>
-        <div class="h-2 bg-border w-1/2 rounded"></div>
-        <div class="h-2 bg-primary w-2/3 opacity-60 rounded"></div>
+
+      <div class="flex-col reveal-backend opacity-0">
+        <p class="pl-1 text-xs font-mono text-primary mb-1">Backend</p>
+        <div class="flex overflow-hidden gap-2">
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-500 font-mono text-primary w-fit">
+            > Node.Js
+          </div>
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > PostgreSQL
+          </div>
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > NestJS
+          </div>
+        </div>
       </div>
-      <div class="flex flex-col justify-between mt-16 text-sm">
-        <p class="text-text font-bold">> Initialize narrative engine.</p>
-        <p class="text-white font-bold">> Loading dependencies.</p>
-        <p class="text-text font-bold">> System Ready.</p>
+
+      <div class="flex-col reveal-infra opacity-0">
+        <p class="pl-1 text-xs font-mono text-primary mb-1">Infra / Ops</p>
+        <div class="flex overflow-hidden gap-2">
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > OpenSearch Dashboard
+          </div>
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > Vercel
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-col reveal-learning opacity-0">
+        <p class="pl-1 text-xs font-mono text-primary mb-1">Currently Learning</p>
+        <div class="flex overflow-hidden gap-2">
+          <div class="text-xs p-1 pr-2 pl-2 rounded bg-background border border-zinc-800 font-mono text-primary w-fit">
+            > System design
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</section>>

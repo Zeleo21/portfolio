@@ -1,4 +1,6 @@
-<main class="mt-4 font-sans">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
+<main class="flex flex-col h-screen font-sans overflow-hidden">
+  <app-header class="flex-none"></app-header>
+  <div class="flex-1 overflow-hidden">
+    <router-outlet></router-outlet>
+  </div>
 </main>
