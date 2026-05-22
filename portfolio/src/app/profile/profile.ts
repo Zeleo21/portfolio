@@ -1,9 +1,10 @@
-import { afterNextRender, Component, inject } from '@angular/core';
+import {afterNextRender, Component, inject,} from '@angular/core';
 import { Tag, Theme } from '../components/tag/tag';
 import { splitText, stagger, Timeline } from 'animejs';
 import { AnimateService } from '../service/animate/animate.service';
 import { Router } from '@angular/router';
 import {Footer} from '../components/footer/footer';
+
 
 @Component({
   selector: 'app-profile',

@@ -7,5 +7,5 @@ import { Component, Signal, signal } from '@angular/core';
   styleUrl: './projects.scss',
 })
 export class Projects {
-  protected readonly hidden: Signal<boolean> = signal(true);
+  protected readonly hidden: Signal<boolean> = signal(false);
 }

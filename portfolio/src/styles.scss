@@ -36,6 +36,7 @@ body {
   .dot-grid {
     background-image: radial-gradient(circle, #707070 1px, transparent 1px);
     background-size: 24px 24px;
+    overflow: hidden;
   }
 
   .underline-slide {
