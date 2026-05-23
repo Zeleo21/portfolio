@@ -12,8 +12,13 @@ import { Router } from '@angular/router';
 })
 export class Header {
   private router = inject(Router);
+  protected isMenuOpen: boolean = false;
 
   protected navigateToHome() {
     this.router.navigate(['/'])
+  }
+
+  protected toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
