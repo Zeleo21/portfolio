@@ -1,0 +1,9 @@
+<div class="h-full flex border border-zinc-500 mr-4 ml-4 rounded">
+  <div class="flex justify-start items-center gap-1 text-primary">
+    @for (tagStyle of tagStyles(); track tagStyle) {
+      <div [class]="tagStyle.classes" [title]="tagStyle.label"></div>
+    }
+  </div>
+</div>
+
+

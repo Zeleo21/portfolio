@@ -6,10 +6,10 @@ import {Header} from '../components/header/header';
   selector: 'app-home',
   imports: [
     Profile,
-    Header
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
+  standalone: true
 })
 export class Home {
 
