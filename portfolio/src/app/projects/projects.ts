@@ -1,7 +1,7 @@
 import {afterNextRender, Component, computed, inject, input, Signal, signal} from '@angular/core';
 import {Card} from '../components/card/card';
 import {AnimateService} from '../service/animate/animate.service';
-import {stagger} from 'animejs';
+import {animate, stagger} from 'animejs';
 import {TagClassHelper, TagStyle} from '../helper/tagClass.helper';
 
 export enum Tag {
@@ -32,6 +32,13 @@ export class Projects {
 
   openModal(card: any) {
     this.activeCard.set(card);
+    setTimeout(() => {
+      animate('.reveal-modal-content', {
+        y: { from: -100, to: 0 },
+        duration: 200,
+        ease: 'inOut'
+      });
+    }, 0);
   }
 
   closeModal() {
@@ -68,6 +75,7 @@ export class Projects {
       description: 'A tool designed to help French doctors and occupational health services identify employees potentially at risk in their professional environment.',
       keyFeatures: ['8 millions+ employees', 'batching, SQL Trigger, indexing', 'smart SQL scanning (no offset, id based)', 'recurrent task - weekly update of score'],
       githubLink: '',
+      backgroundURL: 'padoa.jpg'
     },
     {
       tags: [Tag.REACTNATIVE, Tag.EXPO, Tag.BLE, Tag.HARDWARE],
@@ -76,6 +84,7 @@ export class Projects {
       description: 'A group school projects that uses bluetooth with BLE and sensors to send ads to customers passing by in front of the store to receive custom ads through AI generated ads',
       keyFeatures: ['mobile application', 'AI generation and LLM integration', 'react-native', 'design thinking' ],
       githubLink: 'https://github.com/Ligne8/AgoraPulse-Application',
+      backgroundURL: 'iot.jpg'
     },
     {
       tags: [Tag.REACT, Tag.KONVA],
@@ -84,6 +93,7 @@ export class Projects {
       description: 'A maze generator that follows classic generation algorithm and help visualize the generation in realtime',
       keyFeatures: ['Randomized depth-first search', 'realtime', 'react konva and canvas' ],
       githubLink: 'https://github.com/Zeleo21/pathfinder',
+      backgroundURL: 'maze.png'
     }
   ]
 }

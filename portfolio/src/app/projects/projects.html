@@ -49,10 +49,11 @@
   </div>
 
   @if (activeCard(); as card) {
-    <div class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" (click)="closeModal()">
-      <div class="bg-background border border-zinc-800 rounded-lg w-full max-w-lg overflow-hidden" (click)="$event.stopPropagation()">
+    <div class="reveal-card fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4" (click)="closeModal()">
+      <div class="reveal-modal-content bg-background border border-zinc-800 rounded-lg w-full max-w-lg overflow-hidden" (click)="$event.stopPropagation()">
 
         <div class="h-30 bg-surface relative">
+          <img class="absolute inset-0 w-full h-full object-cover z-0" [src]="card.backgroundURL" alt="Maze">
           <button (click)="closeModal()" class="absolute top-3 right-3 bg-zinc-900 border border-zinc-700 rounded p-1 hover:border-zinc-500 text-muted">
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
