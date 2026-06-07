@@ -14,11 +14,22 @@ export class Header {
   private router = inject(Router);
   protected isMenuOpen: boolean = false;
 
+  protected urls = {
+    contact: '/contact',
+    experience: '/experience',
+    education: '/education',
+    about: '/about',
+  }
+
   protected navigateToHome() {
     this.router.navigate(['/'])
   }
 
   protected toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  protected navigateTo(url: string) {
+    this.router.navigate([url]);
   }
 }

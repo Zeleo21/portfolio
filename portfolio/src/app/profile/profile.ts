@@ -92,4 +92,8 @@ export class Profile {
   protected navigateToProjects(): void {
     this.router.navigate(['/projects']);
   }
+
+  protected navigateToContact(): void {
+    this.router.navigate(['/contact']);
+  }
 }

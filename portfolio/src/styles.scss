@@ -11,6 +11,11 @@ body {
     transition : all 0.3s;
   }
 
+  .glow-muted {
+    text-shadow: 0 0 8px #707070, 0 0 20px #707070, 0 0 40px rgba(112, 112, 112, 0.5);
+    transition: all 0.3s;
+  }
+
   .glow-subtitle {
     text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 0 15px rgba(112, 112, 112, 0.4);
   }
