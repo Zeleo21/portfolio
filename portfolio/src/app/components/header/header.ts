@@ -19,6 +19,7 @@ export class Header {
     experience: '/experience',
     education: '/education',
     about: '/about',
+    projetcts: '/projects',
   }
 
   protected navigateToHome() {
