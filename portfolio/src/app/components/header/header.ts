@@ -30,7 +30,8 @@ export class Header {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  protected navigateTo(url: string) {
+  protected navigateTo(url: string, toggleMenu: boolean = false) {
+    if(toggleMenu) this.toggleMenu();
     this.router.navigate([url]);
   }
 }
